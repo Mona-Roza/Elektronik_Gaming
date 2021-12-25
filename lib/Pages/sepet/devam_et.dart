@@ -30,12 +30,14 @@ class _DevamEtState extends State<DevamEt> {
             Expanded(
                 flex: 5,
                 child: Container(
-                  decoration: boxesdecorations(Colors.grey.shade200),
+                  decoration: boxesdecorations(
+                      Colors.grey.shade200, Colors.transparent),
                   child: Column(
                     children: [
                       SingleChildScrollView(
                         child: Container(
-                          decoration: boxesdecorations(Colors.grey.shade400),
+                          decoration: boxesdecorations(
+                              Colors.grey.shade400, Colors.transparent),
                           child: Column(
                             children: [
                               //buraya kvkk metni gelecek??
@@ -60,12 +62,12 @@ class _DevamEtState extends State<DevamEt> {
   Widget adresim() {
     if (UserModel.adres == null) {
       return Container(
-        decoration: boxesdecorations(Colors.grey.shade400),
+        decoration: boxesdecorations(Colors.grey.shade400, Colors.transparent),
         child: Column(
           children: [
             const Text('Hiç kayıtlı adresiniz yok'),
             Container(
-              decoration: boxesdecorations(Colors.black),
+              decoration: boxesdecorations(Colors.black, Colors.transparent),
               child: InkWell(
                 onTap: () {
                   MainScreen.selected = 'profil';
@@ -82,7 +84,7 @@ class _DevamEtState extends State<DevamEt> {
       );
     } else {
       return Container(
-        decoration: boxesdecorations(Colors.grey.shade400),
+        decoration: boxesdecorations(Colors.grey.shade400, Colors.transparent),
         child: Text(UserModel.adres ?? 'Hiç kayıtlı adresiniz yok'),
       );
     }

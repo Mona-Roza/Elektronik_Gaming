@@ -16,7 +16,7 @@ class _MobileHeaderState extends State<MobileHeader> {
           child: Container(
             width: double.infinity,
             height: 75,
-            color: Colors.grey.shade900,
+            color: Colors.orange.shade700,
             child: Row(
               children: [
                 InkWell(
@@ -37,7 +37,7 @@ class _MobileHeaderState extends State<MobileHeader> {
                       children: [
                         const Expanded(child: SizedBox()),
                         const Text(
-                          'ELektronik',
+                          'Elektronik',
                           style: TextStyle(color: Colors.white, fontSize: 30),
                         ),
                         const SizedBox(width: 20),
@@ -47,7 +47,7 @@ class _MobileHeaderState extends State<MobileHeader> {
                             Text(
                               'Gaming',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
+                                  TextStyle(color: Colors.white, fontSize: 20),
                             ),
                           ],
                         ),

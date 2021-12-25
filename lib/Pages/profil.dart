@@ -37,7 +37,7 @@ class _ProfilState extends State<Profil> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: controller,
         keyboardType: TextInputType.visiblePassword,
@@ -57,7 +57,7 @@ class _ProfilState extends State<Profil> {
     return Container(
       width: double.infinity,
       height: 110,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         maxLines: 5,
         controller: _adresController,
@@ -89,7 +89,8 @@ class _ProfilState extends State<Profil> {
                 Expanded(
                   flex: 5,
                   child: Container(
-                    decoration: boxesdecorations(Colors.grey.shade200),
+                    decoration: boxesdecorations(
+                        Colors.grey.shade200, Colors.transparent),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
@@ -98,7 +99,8 @@ class _ProfilState extends State<Profil> {
                               style: TextStyle(fontSize: 40)),
                           const SizedBox(height: 20),
                           Container(
-                            decoration: boxesdecorations(Colors.grey.shade300),
+                            decoration: boxesdecorations(
+                                Colors.white, Colors.orange.shade900),
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
@@ -113,7 +115,8 @@ class _ProfilState extends State<Profil> {
                           ),
                           const SizedBox(height: 20),
                           Container(
-                            decoration: boxesdecorations(Colors.grey.shade300),
+                            decoration: boxesdecorations(
+                                Colors.white, Colors.orange.shade900),
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
@@ -127,7 +130,8 @@ class _ProfilState extends State<Profil> {
                           ),
                           const SizedBox(height: 20),
                           Container(
-                            decoration: boxesdecorations(Colors.grey.shade300),
+                            decoration: boxesdecorations(
+                                Colors.white, Colors.orange.shade900),
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
@@ -165,7 +169,8 @@ class _ProfilState extends State<Profil> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              decoration: boxesdecorations(Colors.grey.shade200),
+              decoration:
+                  boxesdecorations(Colors.grey.shade200, Colors.transparent),
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
@@ -173,7 +178,8 @@ class _ProfilState extends State<Profil> {
                     const Text('Profilim', style: TextStyle(fontSize: 40)),
                     const SizedBox(height: 20),
                     Container(
-                      decoration: boxesdecorations(Colors.grey.shade300),
+                      decoration: boxesdecorations(
+                          Colors.grey.shade300, Colors.transparent),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Column(
@@ -188,7 +194,8 @@ class _ProfilState extends State<Profil> {
                     ),
                     const SizedBox(height: 20),
                     Container(
-                      decoration: boxesdecorations(Colors.grey.shade300),
+                      decoration: boxesdecorations(
+                          Colors.grey.shade300, Colors.transparent),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Column(
@@ -202,7 +209,8 @@ class _ProfilState extends State<Profil> {
                     ),
                     const SizedBox(height: 20),
                     Container(
-                      decoration: boxesdecorations(Colors.grey.shade300),
+                      decoration: boxesdecorations(
+                          Colors.grey.shade300, Colors.transparent),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Column(
@@ -249,7 +257,8 @@ class _ProfilState extends State<Profil> {
           child: Container(
             width: 110,
             height: 40,
-            decoration: boxesdecorations(Colors.black),
+            decoration:
+                boxesdecorations(Colors.orange.shade900, Colors.transparent),
             child: const Center(
               child: Text(
                 'ADRESİ EKLE',
@@ -282,7 +291,8 @@ class _ProfilState extends State<Profil> {
           child: Container(
             width: 200,
             height: 40,
-            decoration: boxesdecorations(Colors.black),
+            decoration:
+                boxesdecorations(Colors.orange.shade900, Colors.transparent),
             child: const Center(
               child: Text(
                 'Şifremi Değiştir',

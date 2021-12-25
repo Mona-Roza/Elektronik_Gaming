@@ -21,5 +21,5 @@ class UrunModel {
     urunFiyat = surunFiyat;
     gorsel = sgorsel;
     selectedRadio = sselectedRadio;
-  } //bu kısım ürün ekleme yeri olduğu zaman kullanılır.
+  } //bu kısım ürün ekleme yeri olduğu zaman kullanılır. -sepette kullandık-
 }

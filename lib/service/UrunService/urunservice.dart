@@ -7,7 +7,7 @@ class UrunService {
 
   static Future urunCek() async {
     urunList.clear();
-    await database.collection('urunler').get().then((value) {
+    await database.collection('urunler1').get().then((value) {
       for (var element in value.docs) {
         urunList.add(UrunModel.fromSnapShot(element));
       }

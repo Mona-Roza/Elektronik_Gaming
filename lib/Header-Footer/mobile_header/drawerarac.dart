@@ -1,3 +1,4 @@
+import 'package:elektronik_gaming/Decoration/decoration.dart';
 import 'package:elektronik_gaming/Pages/signin.dart';
 import 'package:elektronik_gaming/mainscreen.dart';
 import 'package:elektronik_gaming/service/UserService/user_service.dart';
@@ -86,15 +87,37 @@ class _DrawerAracState extends State<DrawerArac> {
   }
 
   Widget buton(String deger, String baslik) {
-    return InkWell(
-      onTap: () {
-        MainScreen.selected = deger;
-        MainScreen.globalKey.currentState!.setState(() {});
-        MainScreen.globalKey.currentState!.setState(() {
-          MainScreen.scaffoldKey.currentState!.openEndDrawer();
-        });
-      },
-      child: Text(deger),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+      child: Container(
+        decoration:
+            boxesdecorations(Colors.orange.shade400, Colors.transparent),
+        width: double.infinity,
+        height: 50,
+        child: InkWell(
+          onTap: () {
+            MainScreen.selected = deger;
+            MainScreen.globalKey.currentState!.setState(() {});
+            MainScreen.globalKey.currentState!.setState(() {
+              MainScreen.scaffoldKey.currentState!.openEndDrawer();
+            });
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Expanded(child: SizedBox()),
+                Text(
+                  baslik,
+                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                const Expanded(child: SizedBox()),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

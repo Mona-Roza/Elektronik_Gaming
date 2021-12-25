@@ -22,7 +22,7 @@ class _FooterState extends State<Footer> {
 
   Widget desktop() {
     return Container(
-      decoration: boxesdecorations(Colors.grey.shade600),
+      decoration: boxesdecorations(Colors.orange.shade900, Colors.transparent),
       height: 100,
       width: double.infinity,
       child: Column(
@@ -35,12 +35,14 @@ class _FooterState extends State<Footer> {
             },
             child: const Text(
               'Kişisel Verilerin Korunması ve İşlenmesi Politikası',
-              style: TextStyle(fontSize: 10),
+              style: TextStyle(fontSize: 10, color: Colors.white),
             ),
           ),
           const SizedBox(height: 10),
           const Text(
-              'Copyright © 2021 - 2031 Aurora İç Giyim | Tüm Hakları Saklıdır.'),
+            'Copyright © 2021 - 2031 Elektronik Gaming | Tüm Hakları Saklıdır.',
+            style: TextStyle(color: Colors.white),
+          ),
         ],
       ),
     );
@@ -48,7 +50,7 @@ class _FooterState extends State<Footer> {
 
   Widget mobile() {
     return Container(
-      decoration: boxesdecorations(Colors.grey.shade600),
+      decoration: boxesdecorations(Colors.grey.shade600, Colors.transparent),
       height: 100,
       width: double.infinity,
       child: Column(
@@ -66,7 +68,7 @@ class _FooterState extends State<Footer> {
           ),
           const SizedBox(height: 10),
           const Text(
-              'Copyright © 2021 - 2031 Aurora İç Giyim | Tüm Hakları Saklıdır.'),
+              'Copyright © 2021 - 2031 Elektronik Gaming | Tüm Hakları Saklıdır.'),
         ],
       ),
     );

@@ -40,7 +40,8 @@ class _UyeOlmadanDevamEtState extends State<UyeOlmadanDevamEt> {
                 Expanded(
                     flex: 5,
                     child: Container(
-                      decoration: boxesdecorations(Colors.grey.shade200),
+                      decoration: boxesdecorations(
+                          Colors.grey.shade200, Colors.transparent),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Column(
@@ -67,7 +68,7 @@ class _UyeOlmadanDevamEtState extends State<UyeOlmadanDevamEt> {
   Widget mobile() {
     return SingleChildScrollView(
       child: Container(
-        decoration: boxesdecorations(Colors.grey.shade200),
+        decoration: boxesdecorations(Colors.grey.shade200, Colors.transparent),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -87,7 +88,8 @@ class _UyeOlmadanDevamEtState extends State<UyeOlmadanDevamEt> {
     return [
       Center(
         child: Container(
-          decoration: boxesdecorations(Colors.grey.shade400),
+          decoration:
+              boxesdecorations(Colors.grey.shade400, Colors.transparent),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
@@ -98,7 +100,8 @@ class _UyeOlmadanDevamEtState extends State<UyeOlmadanDevamEt> {
                 Container(
                   width: 100,
                   height: 40,
-                  decoration: boxesdecorations(Colors.black),
+                  decoration:
+                      boxesdecorations(Colors.black, Colors.transparent),
                   child: InkWell(
                     onTap: () {
                       MainScreen.selected = 'signup';
@@ -249,7 +252,7 @@ class _UyeOlmadanDevamEtState extends State<UyeOlmadanDevamEt> {
     return Container(
       width: double.infinity,
       height: 110,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.transparent),
       child: TextField(
         maxLines: 5,
         controller: _adresController,
@@ -270,7 +273,7 @@ class _UyeOlmadanDevamEtState extends State<UyeOlmadanDevamEt> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.transparent),
       child: TextField(
         controller: controller,
         keyboardType: inputType,
@@ -289,7 +292,7 @@ class _UyeOlmadanDevamEtState extends State<UyeOlmadanDevamEt> {
 
     return Container(
       height: 60,
-      decoration: boxesdecorations(Colors.black),
+      decoration: boxesdecorations(Colors.black, Colors.transparent),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Row(
@@ -319,7 +322,7 @@ class _UyeOlmadanDevamEtState extends State<UyeOlmadanDevamEt> {
     return Container(
       width: 150,
       height: 45,
-      decoration: boxesdecorations(Colors.black),
+      decoration: boxesdecorations(Colors.black, Colors.transparent),
       child: InkWell(
         onTap: () {},
         child: const Center(

@@ -21,30 +21,24 @@ class _KutucukState extends State<Kutucuk> {
   }
 
   Widget desktop() {
-    return Column(
+    return Row(
       children: [
-        Row(
-          children: [
-            const Expanded(flex: 1, child: SizedBox()),
-            Expanded(
-                child: kutucuk(
-                    'Oyuncu Mouseleri', 'mouse', 500, 'assets/mouse/3.jpg')),
-            const SizedBox(height: 20),
-            Expanded(
-              child: kutucuk('Oyuncu Kulaklıkları', 'kulaklik', 500,
-                  'assets/kulaklık/5.jpg'),
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-                child: kutucuk(
-                    'Oyuncu Klavyeleri', 'klavye', 500, 'assets/klavye/8.png')),
-            const SizedBox(height: 20),
-            Expanded(
-                child: kutucuk(
-                    'Oyuncu Koltukları', 'koltuk', 500, 'assets/koltuk/2.png')),
-            const Expanded(flex: 1, child: SizedBox()),
-          ],
+        Expanded(
+            child: kutucuk(
+                'Oyuncu Mouseleri', 'mouse', 300, 'assets/mouse/3.jpg')),
+        const SizedBox(width: 10),
+        Expanded(
+          child: kutucuk(
+              'Oyuncu Kulaklıkları', 'kulaklık', 300, 'assets/kulaklık/5.jpg'),
         ),
+        const SizedBox(width: 10),
+        Expanded(
+            child: kutucuk(
+                'Oyuncu Klavyeleri', 'klavye', 300, 'assets/klavye/8.png')),
+        const SizedBox(width: 10),
+        Expanded(
+            child: kutucuk(
+                'Oyuncu Koltukları', 'koltuk', 300, 'assets/koltuk/2.png')),
       ],
     );
   }
@@ -55,14 +49,14 @@ class _KutucukState extends State<Kutucuk> {
       child: SizedBox(
         child: Column(
           children: [
-            kutucuk('Oyuncu Mouseleri', 'mouse', 500, 'assets/mouse/3.jpg'),
+            kutucuk('Oyuncu Mouseleri', 'mouse', 300, 'assets/mouse/3.jpg'),
             const SizedBox(height: 20),
-            kutucuk('Oyuncu Kulaklıkları', 'kulaklik', 500,
+            kutucuk('Oyuncu Kulaklıkları', 'kulaklik', 300,
                 'assets/kulaklık/5.jpg'),
             const SizedBox(height: 20),
-            kutucuk('Oyuncu Klavyeleri', 'klavye', 500, 'assets/klavye/8.png'),
+            kutucuk('Oyuncu Klavyeleri', 'klavye', 300, 'assets/klavye/8.png'),
             const SizedBox(height: 20),
-            kutucuk('Oyuncu Koltukları', 'koltuk', 500, 'assets/koltuk/2.png'),
+            kutucuk('Oyuncu Koltukları', 'koltuk', 300, 'assets/koltuk/2.png'),
           ],
         ),
       ),
@@ -77,25 +71,32 @@ class _KutucukState extends State<Kutucuk> {
           MainScreen.selected = yonlendirme;
           MainScreen.globalKey.currentState!.setState(() {});
         },
-        child: Column(
+        child: Stack(
           children: [
-            Image.asset(
-              image,
-              fit: BoxFit.fill,
+            Center(
+              child: Image.asset(
+                image,
+                fit: BoxFit.fill,
+              ),
             ),
-            Container(
-              decoration: boxesdecorations(Colors.white.withOpacity(0.5)),
-              child: Center(
-                child: Text(
-                  kategori,
-                  style: const TextStyle(fontSize: 30, color: Colors.black),
+            Center(
+              child: Container(
+                height: 50,
+                width: 300,
+                decoration: boxesdecorations(
+                    Colors.white.withOpacity(0.5), Colors.transparent),
+                child: Center(
+                  child: Text(
+                    kategori,
+                    style: const TextStyle(fontSize: 25, color: Colors.black),
+                  ),
                 ),
               ),
             ),
           ],
         ),
       ),
-      decoration: boxesdecorations(Colors.orange),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
     );
   }
 }

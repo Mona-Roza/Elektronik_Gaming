@@ -29,7 +29,8 @@ class _AdminState extends State<Admin> {
             Expanded(
               flex: 5,
               child: Container(
-                decoration: boxesdecorations(Colors.grey.shade200),
+                decoration:
+                    boxesdecorations(Colors.grey.shade200, Colors.transparent),
                 child: Column(
                   children: [
                     const SayfaBasi(),

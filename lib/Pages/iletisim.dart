@@ -34,7 +34,8 @@ class _IletisimState extends State<Iletisim> {
             padding: const EdgeInsets.all(8.0),
             child: Container(
               height: 1000,
-              decoration: boxesdecorations(Colors.grey.shade200),
+              decoration:
+                  boxesdecorations(Colors.grey.shade200, Colors.transparent),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 32.0),
                 child: Column(
@@ -79,7 +80,8 @@ class _IletisimState extends State<Iletisim> {
                   flex: 5,
                   child: Container(
                     height: 700,
-                    decoration: boxesdecorations(Colors.grey.shade200),
+                    decoration: boxesdecorations(
+                        Colors.grey.shade200, Colors.transparent),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -148,8 +150,8 @@ class _IletisimState extends State<Iletisim> {
       height: boy,
       width: en,
       decoration: BoxDecoration(
-          color: Colors.black,
-          border: Border.all(width: 2, color: Colors.black),
+          color: Colors.orange.shade900,
+          border: Border.all(width: 2, color: Colors.transparent),
           borderRadius: BorderRadius.circular(4)),
       child: InkWell(
         onTap: () {

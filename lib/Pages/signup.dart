@@ -41,7 +41,7 @@ class _SignUpState extends State<SignUp> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _emailController,
         keyboardType: TextInputType.emailAddress,
@@ -59,7 +59,7 @@ class _SignUpState extends State<SignUp> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _emailController2,
         keyboardType: TextInputType.emailAddress,
@@ -77,7 +77,7 @@ class _SignUpState extends State<SignUp> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _isimController,
         keyboardType: TextInputType.name,
@@ -95,7 +95,7 @@ class _SignUpState extends State<SignUp> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _telephoneController,
         keyboardType: TextInputType.name,
@@ -113,7 +113,7 @@ class _SignUpState extends State<SignUp> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _soyisimController,
         keyboardType: TextInputType.name,
@@ -131,7 +131,7 @@ class _SignUpState extends State<SignUp> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _passwordController,
         obscureText: true,
@@ -149,7 +149,7 @@ class _SignUpState extends State<SignUp> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _confirmpasswordController,
         obscureText: true,
@@ -170,7 +170,8 @@ class _SignUpState extends State<SignUp> {
           Padding(
             padding: const EdgeInsets.all(8),
             child: Container(
-              decoration: boxesdecorations(Colors.grey.shade200),
+              decoration:
+                  boxesdecorations(Colors.grey.shade200, Colors.transparent),
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -201,7 +202,8 @@ class _SignUpState extends State<SignUp> {
                 Expanded(
                   flex: 5,
                   child: Container(
-                    decoration: boxesdecorations(Colors.grey.shade200),
+                    decoration: boxesdecorations(
+                        Colors.grey.shade200, Colors.transparent),
                     child: Row(
                       children: [
                         Expanded(
@@ -210,8 +212,8 @@ class _SignUpState extends State<SignUp> {
                             child: Container(
                               width: double.infinity,
                               height: 200,
-                              decoration:
-                                  boxesdecorations(Colors.grey.shade600),
+                              decoration: boxesdecorations(
+                                  Colors.white, Colors.orange.shade900),
                               child: Column(
                                 children: [
                                   const Expanded(child: SizedBox()),
@@ -252,7 +254,7 @@ class _SignUpState extends State<SignUp> {
       //kayıt ol butonu
       height: 45,
       width: 100,
-      decoration: boxesdecorations(Colors.black),
+      decoration: boxesdecorations(Colors.orange.shade900, Colors.transparent),
       child: InkWell(
         onTap: () async {
           UserService.signUp(
@@ -277,7 +279,7 @@ class _SignUpState extends State<SignUp> {
     return Container(
       height: 45,
       width: 100,
-      decoration: boxesdecorations(Colors.black),
+      decoration: boxesdecorations(Colors.orange.shade900, Colors.transparent),
       child: InkWell(
         onTap: () {
           MainScreen.selected = 'signin';
@@ -392,7 +394,8 @@ class _SignUpState extends State<SignUp> {
           ],
           content: Container(
             padding: const EdgeInsets.all(10),
-            decoration: boxesdecorations(Colors.grey.shade500),
+            decoration:
+                boxesdecorations(Colors.grey.shade500, Colors.transparent),
             height: 70,
             width: 635,
             child: Center(
@@ -406,7 +409,8 @@ class _SignUpState extends State<SignUp> {
                           context, _emailController2.text);
                     },
                     child: Container(
-                      decoration: boxesdecorations(Colors.black),
+                      decoration: boxesdecorations(
+                          Colors.orange.shade900, Colors.transparent),
                       width: 100,
                       height: 50,
                       child: const Center(
@@ -441,7 +445,8 @@ class _SignUpState extends State<SignUp> {
           ],
           content: Container(
             padding: const EdgeInsets.all(10),
-            decoration: boxesdecorations(Colors.grey.shade500),
+            decoration:
+                boxesdecorations(Colors.grey.shade500, Colors.transparent),
             height: 70,
             width: 635,
             child: Center(
@@ -455,7 +460,8 @@ class _SignUpState extends State<SignUp> {
                           context, _emailController2.text);
                     },
                     child: Container(
-                      decoration: boxesdecorations(Colors.black),
+                      decoration: boxesdecorations(
+                          Colors.orange.shade900, Colors.transparent),
                       width: 100,
                       height: 50,
                       child: const Center(

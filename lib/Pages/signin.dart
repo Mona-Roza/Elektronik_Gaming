@@ -1,5 +1,6 @@
 import 'package:elektronik_gaming/Decoration/decoration.dart';
 import 'package:elektronik_gaming/Decoration/sayfa_basi.dart';
+import 'package:elektronik_gaming/Header-Footer/desktopheader.dart';
 import 'package:elektronik_gaming/Header-Footer/footer.dart';
 import 'package:elektronik_gaming/mainscreen.dart';
 import 'package:elektronik_gaming/service/UserService/user_service.dart';
@@ -9,9 +10,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
-  static GlobalKey<State> globalKey = GlobalKey();
-
   static bool girisYapildi = false;
+  static GlobalKey<State> globalKey = GlobalKey();
 
   @override
   _SignInState createState() => _SignInState();
@@ -39,7 +39,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _emailController,
         keyboardType: TextInputType.emailAddress,
@@ -62,7 +62,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       width: 500,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.transparent),
       child: TextField(
         controller: _emailController2,
         keyboardType: TextInputType.emailAddress,
@@ -85,7 +85,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: boxesdecorations(Colors.white),
+      decoration: boxesdecorations(Colors.white, Colors.orange.shade900),
       child: TextField(
         controller: _passwordController,
         obscureText: true,
@@ -108,7 +108,8 @@ class _SignInState extends State<SignIn> {
           Padding(
             padding: const EdgeInsets.all(8),
             child: Container(
-              decoration: boxesdecorations(Colors.grey.shade200),
+              decoration:
+                  boxesdecorations(Colors.grey.shade200, Colors.transparent),
               child: Center(
                 child: Column(
                   children: mobileContent(),
@@ -135,7 +136,8 @@ class _SignInState extends State<SignIn> {
                 Expanded(
                   flex: 5,
                   child: Container(
-                    decoration: boxesdecorations(Colors.grey.shade200),
+                    decoration: boxesdecorations(
+                        Colors.grey.shade200, Colors.transparent),
                     child: Row(
                       children: [
                         Expanded(
@@ -144,8 +146,8 @@ class _SignInState extends State<SignIn> {
                             child: Container(
                               width: double.infinity,
                               height: 200,
-                              decoration:
-                                  boxesdecorations(Colors.grey.shade600),
+                              decoration: boxesdecorations(
+                                  Colors.white, Colors.orange.shade900),
                               child: Column(
                                 children: [
                                   const Expanded(child: SizedBox()),
@@ -185,7 +187,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       height: 45,
       width: 100,
-      decoration: boxesdecorations(Colors.black),
+      decoration: boxesdecorations(Colors.orange.shade900, Colors.transparent),
       child: InkWell(
         onTap: () {
           MainScreen.selected = 'signup';
@@ -205,16 +207,19 @@ class _SignInState extends State<SignIn> {
     return Container(
       height: 45,
       width: 100,
-      decoration: boxesdecorations(Colors.black),
+      decoration: boxesdecorations(Colors.orange.shade900, Colors.transparent),
       child: InkWell(
         onTap: () async {
           var number = await UserService.signIn(
               context, _emailController.text, _passwordController.text);
 
           if (number == 1) {
+            setState(() {
+              SignIn.girisYapildi = true;
+              //DesktopHeader.desktopHeaderKey.currentState!.setState(() {});
+            });
             MainScreen.selected = 'anasayfa';
             MainScreen.globalKey.currentState!.setState(() {});
-            SignIn.girisYapildi = true;
           }
         },
         child: const Center(
@@ -298,7 +303,8 @@ class _SignInState extends State<SignIn> {
           ],
           content: Container(
             padding: const EdgeInsets.all(10),
-            decoration: boxesdecorations(Colors.grey.shade500),
+            decoration:
+                boxesdecorations(Colors.grey.shade200, Colors.transparent),
             height: 70,
             width: 635,
             child: Center(
@@ -312,7 +318,8 @@ class _SignInState extends State<SignIn> {
                           context, _emailController2.text);
                     },
                     child: Container(
-                      decoration: boxesdecorations(Colors.black),
+                      decoration: boxesdecorations(
+                          Colors.orange.shade900, Colors.transparent),
                       width: 100,
                       height: 50,
                       child: const Center(

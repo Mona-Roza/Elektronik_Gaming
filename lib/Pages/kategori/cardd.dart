@@ -51,9 +51,10 @@ class _CarddState extends State<Cardd> {
       child: Row(
         children: [
           Expanded(
+            flex: 2,
             child: Container(
               height: double.infinity,
-              color: Colors.black,
+              color: Colors.white,
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Image.asset(
@@ -65,11 +66,12 @@ class _CarddState extends State<Cardd> {
           ),
           const SizedBox(width: 20),
           Expanded(
+            flex: 1,
             child: Column(
               children: [
                 Text(
                   isim,
-                  style: const TextStyle(fontSize: 60),
+                  style: TextStyle(fontSize: 30, color: Colors.orange.shade900),
                 ),
                 const Expanded(child: SizedBox()),
                 radioButonu(),
@@ -115,62 +117,67 @@ class _CarddState extends State<Cardd> {
   }
 
   Widget radioButonu() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
       children: [
-        Column(
+        const Text('Adet seçiniz: '),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Radio(
-                value: 1,
-                groupValue: selectedRadio,
-                onChanged: (val) {
-                  setSelectedRadio(1);
-                }),
-            const Text('S'),
-          ],
-        ),
-        Column(
-          children: [
-            Radio(
-                value: 2,
-                groupValue: selectedRadio,
-                onChanged: (val) {
-                  setSelectedRadio(2);
-                }),
-            const Text('M'),
-          ],
-        ),
-        Column(
-          children: [
-            Radio(
-                value: 3,
-                groupValue: selectedRadio,
-                onChanged: (val) {
-                  setSelectedRadio(3);
-                }),
-            const Text('L')
-          ],
-        ),
-        Column(
-          children: [
-            Radio(
-                value: 4,
-                groupValue: selectedRadio,
-                onChanged: (val) {
-                  setSelectedRadio(4);
-                }),
-            const Text('XL')
-          ],
-        ),
-        Column(
-          children: [
-            Radio(
-                value: 5,
-                groupValue: selectedRadio,
-                onChanged: (val) {
-                  setSelectedRadio(5);
-                }),
-            const Text('XXL')
+            Column(
+              children: [
+                Radio(
+                    value: 1,
+                    groupValue: selectedRadio,
+                    onChanged: (val) {
+                      setSelectedRadio(1);
+                    }),
+                const Text('1'),
+              ],
+            ),
+            Column(
+              children: [
+                Radio(
+                    value: 2,
+                    groupValue: selectedRadio,
+                    onChanged: (val) {
+                      setSelectedRadio(2);
+                    }),
+                const Text('2'),
+              ],
+            ),
+            Column(
+              children: [
+                Radio(
+                    value: 3,
+                    groupValue: selectedRadio,
+                    onChanged: (val) {
+                      setSelectedRadio(3);
+                    }),
+                const Text('3')
+              ],
+            ),
+            Column(
+              children: [
+                Radio(
+                    value: 4,
+                    groupValue: selectedRadio,
+                    onChanged: (val) {
+                      setSelectedRadio(4);
+                    }),
+                const Text('4')
+              ],
+            ),
+            Column(
+              children: [
+                Radio(
+                    value: 5,
+                    groupValue: selectedRadio,
+                    onChanged: (val) {
+                      setSelectedRadio(5);
+                    }),
+                const Text('5')
+              ],
+            ),
           ],
         ),
       ],
@@ -224,10 +231,11 @@ class _CarddState extends State<Cardd> {
           ],
           content: Container(
             padding: const EdgeInsets.all(10),
-            decoration: boxesdecorations(Colors.grey.shade500),
+            decoration:
+                boxesdecorations(Colors.grey.shade500, Colors.transparent),
             height: 100,
             width: 200,
-            child: const Center(child: Text('Bir beden seçiniz!')),
+            child: const Center(child: Text('Adet seçiniz!')),
           ),
         );
       },

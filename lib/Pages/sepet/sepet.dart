@@ -40,7 +40,8 @@ class _SepetState extends State<Sepet> {
                 Expanded(
                   flex: 5,
                   child: Container(
-                    decoration: boxesdecorations(Colors.grey.shade200),
+                    decoration: boxesdecorations(
+                        Colors.grey.shade200, Colors.transparent),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
@@ -114,7 +115,8 @@ class _SepetState extends State<Sepet> {
   }
 
   Widget siparisDesktop(UrunModel model) {
-    double fiyat = model.urunFiyat;
+    double fiyat = model.urunFiyat * adetList(model.selectedRadio);
+
     return Column(
       children: [
         Row(
@@ -134,7 +136,7 @@ class _SepetState extends State<Sepet> {
               ),
             ),
             const Expanded(child: SizedBox()),
-            bedenList(model.selectedRadio),
+            Text(adetList(model.selectedRadio).toString() + ' adet'),
             const Expanded(child: SizedBox()),
             Text(
               '$fiyat TL',
@@ -155,7 +157,8 @@ class _SepetState extends State<Sepet> {
   }
 
   Widget siparisMobile(UrunModel model) {
-    double fiyat = model.urunFiyat;
+    double fiyat = model.urunFiyat * adetList(model.selectedRadio);
+
     return Column(
       children: [
         Row(
@@ -178,7 +181,7 @@ class _SepetState extends State<Sepet> {
                   ),
                 ),
                 const SizedBox(height: 10),
-                bedenList(model.selectedRadio),
+                Text(adetList(model.selectedRadio).toString() + ' adet'),
                 const SizedBox(height: 10),
                 Text(
                   '$fiyat TL',
@@ -206,7 +209,7 @@ class _SepetState extends State<Sepet> {
     double toplam = 0.00;
     if (Sepet.sepetList.isNotEmpty) {
       Sepet.sepetList.map((e) {
-        toplam += e.urunFiyat;
+        toplam += (e.urunFiyat * e.selectedRadio);
       }).toList();
       Sepet.top = toplam;
     } else {
@@ -214,7 +217,7 @@ class _SepetState extends State<Sepet> {
     } //burası çalışmıyor
     return Container(
       height: 60,
-      decoration: boxesdecorations(Colors.black),
+      decoration: boxesdecorations(Colors.black, Colors.transparent),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Row(
@@ -296,22 +299,22 @@ class _SepetState extends State<Sepet> {
     }
   }
 
-  Widget bedenList(int selected) {
+  int adetList(int selected) {
     switch (selected) {
       case 1:
-        return const Text('S');
+        return 1;
 
       case 2:
-        return const Text('M');
+        return 2;
       case 3:
-        return const Text('L');
+        return 3;
       case 4:
-        return const Text('XL');
+        return 4;
 
       case 5:
-        return const Text('XXL');
+        return 5;
       default:
-        return const Text('Lütfen beden seçiniz!');
+        return 0;
     }
   }
 }
